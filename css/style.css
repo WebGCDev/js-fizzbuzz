@@ -18,6 +18,14 @@ Typography
 
 :root {
   --coloresfondo: #083b4c;
+  --nobuzzfizzfizzbuzz: #1389b2;
+  --fizz: #00ffbc;
+  --buzz: #ffff00;
+  --fizzbuzz: #ff0000;
+}
+
+h1 {
+  font-size: 70px;
 }
 
 /*
@@ -28,4 +36,26 @@ Body
 
 body {
   background-color: var(--coloresfondo);
+}
+
+.box {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+.fizz {
+  background-color: var(--fizz);
+}
+
+.buzz {
+  background-color: var(--buzz);
+}
+
+.fizzbuzz {
+  background-color: var(--fizzbuzz);
 }

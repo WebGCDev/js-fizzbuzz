@@ -5,14 +5,23 @@
 - Utilizzando Bootstrap aggiungo le classi ai box cosi' da poter cambiare colore.
 */
 
-for (let i = 1; i <= 100; i++) {
-  if (!(i % 3) && !(i % 5)) {
-    console.log(i + ' FizzBuzz');
-  } else if (!(i % 3)) {
-    console.log(i + ' Fizz');
-  } else if (!(i % 5)) {
-    console.log(i + ' Buzz');
-  }
+const containerBox = document.querySelector('.container-box');
 
-  console.log(i);
+for (let i = 1; i <= 100; i++) {
+  const box = document.createElement('div');
+  box.classList.add('box');
+  containerBox.append(box);
+  if (!(i % 3) && !(i % 5)) {
+    box.append('FizzBuzz');
+    box.classList.add('fizzbuzz');
+  } else if (!(i % 3)) {
+    box.append('Fizz');
+    box.classList.add('fizz');
+  } else if (!(i % 5)) {
+    box.append('Buzz');
+    box.classList.add('buzz');
+  } else {
+    box.append(i);
+  }
+  console.log(box);
 }
